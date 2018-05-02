@@ -40,25 +40,42 @@ possible to shatter the set $\{+-+-\}$. Like to see in the following picture:
 The VC-dimension is $\infty$, 
 
 You construct the set as following:
-
 \begin{enumerate}
-  \item All numbers are constructed as product of prime numbers
-  \item 
+  \item Use only primenumbers as basis for construction $B=\{p_1,\ldots,p_k\}$
+  \item As set $X$, you want to shatter, use the product of the numbers in
+  $B/p_i$ for a $p_i$
+  \item The $p_i$, that you doesn't used, is the greatest common divisor of the
+  other numbers
+  \item If you want to shatter such a set, than the primenumbers you do not have
+  in the products are the $k$ you need to use.
+  \item This construction is possible for $\infty$ many combinations
 \end{enumerate}
+\begin{tabular}{|c|c|c|c|c|}
+	  &$p_1$ &$p_2$ &$p_3$ &$p_4$\\
+$x_1$ &		 &1		&1	   &1\\
+$x_2$ &1	 &		&1	   &1\\
+$x_3$ &1	 &1		&	   &1\\
+$x_4$ &1	 &1		&1	   & \\
+\end{tabular}
 \section*{Exercise 2}
 The first observation is, the points have to be in a circle. Wouldn't they be in
-a circle, there would always be a point in the middle, that destroys the
-shattablilty. The points outside and the point in the middle would have to be of
-the same ``classification''.
+a circle, there would always be a point in the middle or a little bit outside,
+that destroys the shattablilty. The points outside and the point in the middle would have to be of
+the same ``classification''. Also is the class of the point a little bit outside
+directly defined, because of the points closer to the rest.
 
 It is possible to sort 7 points such that they are shattable. Subsets of size 1
-and 2 are trivial. All other combinations you can see on the picture.
+and 2 are trivial. All other combinations you can see on the picture. The circle
+is symmetric, so you can turn the picture in all directions and it will still
+works out.
 
 \includegraphics[width=.6\linewidth]{2.jpg}
 
-If you try for 8 points this construction you will fail with a subset of 3. We
-know because of the beginning, that they have to be in a ring organized. If you
-have that than the following is a counterexample of a subset.
+If you try for 8 points, this construction will fail already with a subset of 3.
+We know because of the beginning, that they have to be in a ring organized. If you
+have that than the following is a counterexample of a subset. You can try to
+draw the points a little bit different, but because of the symmetry you will
+always have the same problem for a subset. 
 
 \includegraphics[width=.6\linewidth]{22.jpg}
 
