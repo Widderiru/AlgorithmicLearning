@@ -4,8 +4,7 @@
 \usepackage[latin1]{inputenc} %coding of writteninput %latin1 allows for Umlaute
 \usepackage[T1]{fontenc}%vectorized fonts (cm-super package)
 \usepackage[german]{babel}%some specifics of the german language
-\usepackage{amsfonts, amsmath, amsthm, amssymb, mathabx, paralist}
- \setlength{\parindent}{0em} 
+\usepackage{amsfonts, amsmath, amsthm, amssymb, paralist} 
   \usepackage{listings}
 \usepackage{geometry}
   \geometry{a4paper, top=25mm, left=20mm, right=15mm, bottom=20mm, headsep=10mm, footskip=12mm}
@@ -27,6 +26,7 @@
 \title{Assignment 1}
 
 \begin{document}
+ \setlength{\parindent}{0em}
 
 \section*{Exerise 1}
 \subsection*{a)}
@@ -59,21 +59,20 @@ $x_4$ &1	 &1		&1	   & \\
 \end{tabular}
 \section*{Exercise 2}
 The first observation is, the points have to be in a circle. Wouldn't they be in
-a circle, there would always be a point in the middle or a little bit outside,
-that destroys the shattablilty. The points outside and the point in the middle would have to be of
-the same ``classification''. Also is the class of the point a little bit outside
-directly defined, because of the points closer to the rest.
+a circle, there would always be a point in the middle or a little bit outside, that destroys the ability of shattering. The points outside and the point in the middle would have to be of
+the same ``classification''. Also is the class of the point a little bit outside directly defined, because of the points closer to the rest.
 
-It is possible to sort 7 points such that they are shattable. Subsets of size 1
-and 2 are trivial. All other combinations you can see on the picture. The circle
-is symmetric, so you can turn the picture in all directions and it will still
-works out.
+It is possible to sort 7 points such that they can be shattered by arbitrary rectangles in the plane. Capturing of subsets of size 1
+and 2 are trivial. In the pictures below, you can see the examples how subsets of 4 and 3 points can be captured. The circle
+is symmetric, so you can turn the picture in all directions and it will still work out.
 
 \includegraphics[width=.6\linewidth]{2.jpg}
 
+\includegraphics[width=.6\linewidth]{23.jpg}
+
 If you try for 8 points, this construction will fail already with a subset of 3.
 We know because of the beginning, that they have to be in a ring organized. If you
-have that than the following is a counterexample of a subset. You can try to
+have that then the following is a counterexample of a subset. You can try to
 draw the points a little bit different, but because of the symmetry you will
 always have the same problem for a subset. 
 
