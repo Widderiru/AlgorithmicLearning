@@ -34,7 +34,7 @@
 
 Let $x_1, x_2, ..., x_m$ be a sequence of inputs where $x_i \in \{0,1\}^{2*m-1}$ and contains $2*i - 1$ of $1's$ (with $i\in \{1,...m\}$). We can show that we can shatter them by $\mathcal{H}$.\\
 Let $ones(x)$ be a function which returns the number of ones in x and let $\phi_i(x)$ be a symmetric function which labels input $x_i$ with $1$ and is defined as follows:
-$\phi_i(x) = ((ones(x)) \mod i = 0)$.
+$\phi_i(x) = (ones(x) = i)$.
 Then for any labeling we can find a symmetric function $\psi_j$ (with $j\in\{1, ... 2^{m}\}$) which is a composition of different  $\phi_i(x)$'s by disjunction. \\ 
 For instance, let the desired labeling of inputs be
 $(-,-,....+,+, ..., -)$ where only inputs $x_{m/2}$ and $x_{m/2+1}$ are labeled with ´+´. The corresponding symmetric function would be $\psi(x) = \phi_{m/2}(x) \lor \phi_{m/2+1}(x)$.
