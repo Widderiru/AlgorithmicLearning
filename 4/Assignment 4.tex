@@ -56,11 +56,36 @@ h_I(e_i) = \begin{cases}
 $2^n$ parity functions. $\Rightarrow$ VCdim($\mathcal{H}$)$\leq
 \log|\mathcal{H}| = n$
 
+\section*{Exercise 2} % (fold)
+\label{sec:exercise_2}
+	\subsection*{a)} % (fold)
+	\label{sub:a_}
+	
+	% subsection a_ (end)
+	\subsection*{b)} % (fold)
+	\label{sub:b}
+		Proof idea:
+		
+		\begin{itemize}
+			\item Set $X=\{a,b,c,d,e,f,g,h\}$
+			\item $\mathcal{H}_1$ shatters $\{a,b,c\}$
+			\item $\mathcal{H}_2$ shatters $\{d,e,f\}$
+			\item Construct $\mathcal{H}_1,\mathcal{H}_2$ s.t. $\mathcal{H}_1\cup \mathcal{H}_2$ shatters $X$
+			\\ but in a way that the VCdims of each one alone is still 3 
+			\\ e.g.: $\mathcal{H}_1=\{h_a,h_b,h_c,h_{ab},h_{bc},h_{ac},h_{abc},h_g,h_h\}$
+			and $\mathcal{H}_2=\{h_d,h_e,h_f,h_{de},...,h_{gh},...\}$ (i.e. everything that's missing to shatter $X$) 
+			\item Then $\mathcal{H}_2$ also shatters $\{d,e,f,g\}$ since $h_{gh} \equiv h_g$ when applied to this subset
+			\item It should be possible to expand this argument to arbitrary sets
+		\end{itemize}	
+
+	% subsection b (end)
+% section exercise_2 (end)
+
 \section*{Exercise 3}
-$\mathcal{H^d_con}$ is the class of Boolean conjunctions over the variables
+$\mathcal{H}^d_{con}$ is the class of Boolean conjunctions over the variables
 $x_1,\ldots,x_d$.
 \subsection*{a)}
-$\mathbf{|\mathcal{H_con^d}|}\leq 3^d + 1$
+$\mathbf{|\mathcal{H}_{con}^d|}\leq 3^d + 1$
 
 %http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.8523&rep=rep1&type=pdf
 
@@ -70,9 +95,14 @@ The variable $x_i$ is either positive, negative or not included. So the
 hypothesis space $\mathcal{H}$ is at most of size $3^d + 1$ (probably $3^d$). So
 like in Exercise 1 we can conclude:
 
-VCdim($\mathcal{H_con^d}$)$\leq \log|\mathcal{H_con^d}| = d*log(3)$
+VCdim($\mathcal{H}_{con}^d$)$\leq \log|\mathcal{H}_{con}^d| = d*log(3)$
 
 \subsection*{b)}
+Proof idea:
+
+We can represent any set $X=\{e_{i_1},...,e_{i_j}\}\subseteq \{e_i|i\leq d\}$ by omitting $x_{i_1},...,x_{i_j}$ from the function and get $\overline{x}_1\land \ldots \land \overline{x}_{i_1-1} \land \overline{x}_{i_1+1} \land \ldots \land \overline{x}_d$
+
+
 
 \section*{Exercise 4}
 Observing a set of variables in $\{0,1\}^n$ we see, that there are $n+1$ different variables for a symmetric function which are different in the amount of 1's: \\ ${(0,0,..., 0), (1,0,..., 0), (1,1,..., 0), ... (1,1,1, ... 1)}$ \\
