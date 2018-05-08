@@ -34,10 +34,10 @@ Let $\mathcal{H}_{n-parity}=\{h_I|I\subset [n]\} $ with $h_i(x) =
 
 \textbf{The VC-dimension is } $\mathbf{n}$.
 
-1. VCdim($\mathcacl{H}$)$\geq n$.
+1. VCdim($\mathcal{H}$)$\geq n$.
 
 Therefore let $e_i$ be the unit vectors with exactely a '1' at the i-th entry.
-There are obviously n such vectors. We can now construct any bit assignment with
+There are obviously n such vectors. We can now construct any bit assignment of
 this vectors such that we can define 
 \begin{align*}
 S = \{ i| b_i = 1\}
@@ -50,12 +50,27 @@ h_I(e_i) = \begin{cases}
 \end{cases}
 \end{align*}
 
-2. VCdim($\mathcacl{H}$)$\leq n$ 
+2. VCdim($\mathcal{H}$)$\leq n$ 
 
-$2^n$ parity functions. $\Rightarrow$ VCdim($\mathcacl{H}$)$\leq
-log|\mathcal{H}| = n$
+$2^n$ parity functions. $\Rightarrow$ VCdim($\mathcal{H}$)$\leq
+\log|\mathcal{H}| = n$
 
+\section*{Exercise 3}
+$\mathcal{H^d_con}$ is the class of Boolean conjunctions over the variables
+$x_1,\ldots,x_d$.
+\subsection*{a)}
+$\mathbf{|\mathcal{H_con^d}|}\leq 3^d + 1$
 
+%http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.8523&rep=rep1&type=pdf
 
+% Foundations of Machine learning p. 18 ff
+
+The variable $x_i$ is either positive, negative or not included. So the
+hypothesis space $\mathcal{H}$ is at most of size $3^d + 1$ (probably $3^d$). So
+like in Exercise 1 we can conclude:
+
+VCdim($\mathcal{H_con^d}$)$\leq \log|\mathcal{H_con^d}| = d*log(3)$
+
+\subseciton*{b)}
 
 \end{document}
