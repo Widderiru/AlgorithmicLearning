@@ -1,0 +1,61 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass{article}
+\usepackage[latin1]{inputenc} %coding of writteninput %latin1 allows for Umlaute
+\usepackage[T1]{fontenc}%vectorized fonts (cm-super package)
+\usepackage[german]{babel}%some specifics of the german language
+\usepackage{amsfonts, amsmath, amsthm, amssymb, mathabx, paralist}
+ \setlength{\parindent}{0em} 
+  \usepackage{listings}
+\usepackage{geometry}
+  \geometry{a4paper, top=25mm, left=20mm, right=15mm, bottom=20mm, headsep=10mm, footskip=12mm}
+ \usepackage{rotating} 
+ %Decisiontree
+ \usepackage{tikz,forest}
+\usetikzlibrary{arrows.meta}
+  
+\usepackage{graphicx} 
+
+\usepackage{verbatim}%f�r txt datei
+
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\usepackage{pdfpages}
+\usepackage[section]{placeins}
+\title{Assignment 4}
+\begin{document}
+\maketitle
+\section*{Exercise 1}
+Let $\Chi$ be the boolean hypercube $\{0,1\}^n$ and $x\in\{0,1\}^n$. 
+
+Let $\mathcal{H}_{n-parity}=\{h_I|I\subset [n]\} $ with $h_i(x) =
+(\sum_{i_\in I} x_i) \mod 2$.
+
+\textbf{The VC-dimension is } $\mathbf{n}$.
+
+1. VCdim($\mathcacl{H}$)$\geq n$.
+
+Therefore let $e_i$ be the unit vectors with exactely a '1' at the i-th entry.
+There are obviously n such vectors. We can now construct any bit assignment with
+this vectors such that we can define 
+\begin{align*}
+S = \{ i| b_i = 1\}
+\end{align*}
+Because of that 
+\begin{align*}
+h_I(e_i) = \begin{cases}
+1 \text{, if }i\in I\\
+0 \text{ otherwise}
+\end{cases}
+\end{align*}
+
+2. VCdim($\mathcacl{H}$)$\leq n$ 
+
+$2^n$ parity functions. $\Rightarrow$ VCdim($\mathcacl{H}$)$\leq
+log|\mathcal{H}| = n$
+
+
+
+
+\end{document}
