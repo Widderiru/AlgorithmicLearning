@@ -4,14 +4,14 @@
 \usepackage[latin1]{inputenc} %coding of writteninput %latin1 allows for Umlaute
 \usepackage[T1]{fontenc}%vectorized fonts (cm-super package)
 \usepackage[german]{babel}%some specifics of the german language
-\usepackage{amsfonts, amsmath, amsthm, amssymb, mathabx, paralist}
- \setlength{\parindent}{0em} 
+\usepackage{amsfonts, amsmath, amsthm, amssymb, paralist}
+
   \usepackage{listings}
 \usepackage{geometry}
   \geometry{a4paper, top=25mm, left=20mm, right=15mm, bottom=20mm, headsep=10mm, footskip=12mm}
  \usepackage{rotating} 
  %Decisiontree
- \usepackage{tikz,forest}
+ \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
   
 \usepackage{graphicx} 
@@ -25,9 +25,10 @@
 \usepackage[section]{placeins}
 \title{Assignment 4}
 \begin{document}
+ \setlength{\parindent}{0em} 
 \maketitle
 \section*{Exercise 1}
-Let $\Chi$ be the boolean hypercube $\{0,1\}^n$ and $x\in\{0,1\}^n$. 
+Let $\mathcal{X}$ be the boolean hypercube $\{0,1\}^n$ and $x\in\{0,1\}^n$. 
 
 Let $\mathcal{H}_{n-parity}=\{h_I|I\subset [n]\} $ with $h_i(x) =
 (\sum_{i_\in I} x_i) \mod 2$.
@@ -71,6 +72,13 @@ like in Exercise 1 we can conclude:
 
 VCdim($\mathcal{H_con^d}$)$\leq \log|\mathcal{H_con^d}| = d*log(3)$
 
-\subseciton*{b)}
+\subsection*{b)}
+
+\section*{Exercise 4}
+Observing a set of variables in $\{0,1\}^n$ we see, that there are $n+1$ different variables for a symmetric function which are different in the amount of 1's: \\ ${(0,0,..., 0), (1,0,..., 0), (1,1,..., 0), ... (1,1,1, ... 1)}$ \\
+Let $ones(x)$ be a function which returns the number of ones in x and let $\phi_i(x)$ be a symmetric function which labels input $x_i$ with $1$ and is defined as follows:
+$\phi_i(x) = (ones(x) = i)$.
+Then for any labeling we can find a symmetric function $\psi$ which is a composition of different  $\phi_i(x)$'s by disjunction. \\
+So $VCdim(\mathcal{H}) = n+1$ as for observed symmetric functions only $n+1$ different inputs are possible.
 
 \end{document}
