@@ -76,7 +76,7 @@ VCdim($\mathcal{H_con^d}$)$\leq \log|\mathcal{H_con^d}| = d*log(3)$
 
 \section*{Exercise 4}
 Observing a set of variables in $\{0,1\}^n$ we see, that there are $n+1$ different variables for a symmetric function which are different in the amount of 1's: \\ ${(0,0,..., 0), (1,0,..., 0), (1,1,..., 0), ... (1,1,1, ... 1)}$ \\
-Let $ones(x)$ be a function which returns the number of ones in x and let $\phi_i(x)$ be a symmetric function which labels input $x_i$ with $1$ and is defined as follows:
+Let $ones(x)$ be a function which returns the number of ones in x and let $\phi_i(x)$ be a symmetric function (such that $i\in\{0,..., n\}$) which labels input $x_i$ with $1$ and is defined as follows:
 $\phi_i(x) = (ones(x) = i)$.
 Then for any labeling we can find a symmetric function $\psi$ which is a composition of different  $\phi_i(x)$'s by disjunction. \\
 So $VCdim(\mathcal{H}) = n+1$ as for observed symmetric functions only $n+1$ different inputs are possible.
