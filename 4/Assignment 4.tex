@@ -98,10 +98,40 @@ like in Exercise 1 we can conclude:
 VCdim($\mathcal{H}_{con}^d$)$\leq \log|\mathcal{H}_{con}^d| = d*log(3)$
 
 \subsection*{b)}
-Proof idea:
+% Proof idea:
+% 
+% We can represent any set $X=\{e_{i_1},...,e_{i_j}\}\subseteq \{e_i|i\leq d\}$ by omitting $x_{i_1},...,x_{i_j}$ from the function and get $\overline{x}_1\land \ldots \land \overline{x}_{i_1-1} \land \overline{x}_{i_1+1} \land \ldots \land \overline{x}_d$
 
-We can represent any set $X=\{e_{i_1},...,e_{i_j}\}\subseteq \{e_i|i\leq d\}$ by omitting $x_{i_1},...,x_{i_j}$ from the function and get $\overline{x}_1\land \ldots \land \overline{x}_{i_1-1} \land \overline{x}_{i_1+1} \land \ldots \land \overline{x}_d$
+If you assign every unit vector $e_i$ a variable $x_i$ and $\bar{x_i}$, than if
+you want to have $e_i$ in the subset you choose $x_i$ in the conjunction and
+otherwise $\bar{x_i}$. This only makes true boolean conjunctions possible. 
 
+\subsection*{c)}
+%http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.8523&rep=rep1&type=pdf
+Let $S\subseteq \{0,1\} ^ n$ be a shattered set of size $d+1$. 
+
+Fix an enumeration $u_1,\ldots,u_\{n+1\}$ of the elements of $S$. Let $S_i$ be
+$S\\ u_i$. The definition of shattered gives, that for each $S_i$ exists a
+conjunction $c_i$, such that $S_i = S\bigcap c_i$.
+
+%offical bla bla 
+We can conlcude, that $c_i$ is false on $u_j$, if $i=j$.
+
+So every $c_i$ must contain a literal $l_i$, that makes it false on $c_i$ and
+true on $c_j$. Because of the size of $S$ at least one literal occurs twice.
+
+Wlog this literals are $l_k,l_m$. 
+
+There exists two cases:
+\begin{enumerate}
+  \item $l_k=l_m$\\
+  \item $l_k=\neg l_m$
+\end{enumerate}
+In the first case $l_k$ would be false in $u_k$ and $u_m$, but then $c_k$ is
+false on both $u_k,u_m$.
+
+In the second case we have that for $u_n\neq u_k,u_m$, $l_k \text{ or }\neg l_k$
+has to be false, but than either $c_k \text{ or } c_l$ is false on $u_n$.
 
 
 \section*{Exercise 4}
