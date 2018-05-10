@@ -137,6 +137,12 @@ has to be false, but than either $c_k \text{ or } c_l$ is false on $u_n$.
 %https://ac.els-cdn.com/0020019096000841/1-s2.0-0020019096000841-main.pdf?_tid=7e70d894-4d2c-4da7-be90-e60f3fd8fa26&acdnat=1525862694_d205ac3414c033b4e77e7b255ee3c056
 
 %http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.8523&rep=rep1&type=pdf
+$VCdim(\mathcal{H}_{mcon}^d) \leq d$ as $VCdim(\mathcal{H}_{con}^d) \leq d$ (as shown in $3c$) and $\mathcal{H}_{mcon}^d \subseteq \mathcal{H}_{con}^d$. \\
+
+$VCdim(\mathcal{H}_{mcon}^d) \geq d$ as
+there exist $d$ different inputs which we can label arbitrary by choosing an appropriate $h_{mcon}^d \in \mathcal{H}_{mcon}^d$. E.g. Let $s_1, s_2, ..., s_{d}$ be a sequence of inputs. If an input $s_i$ has to be labeled with $0$, you have to choose a hypothesis which includes variables $x_j$ whose value is set to $0$ in current input and is set to $1$ in other inputs $s_k$ (with $k \in \{1, ... d\}$ and $s\neq k$) if $s_k$ have to be labeled with $1$.
+
+So $VCdim(\mathcal{H}_{mcon}^d) = d$ 
 
 
 
